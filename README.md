@@ -22,5 +22,8 @@ Crie uma pasta na raiz do projeto chamada **config** e dentro dela um arquivo ch
 ## Atualizando dependências :zap:
     npm install
     
-## Iniciando o projeto 
+## Iniciando o projeto :zap:
     npm start
+
+## Rotas de teste
+Faça o import do arquivo rotasDeTeste.json no Insomnia para testar todas as rotas da API.
