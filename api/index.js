@@ -3,6 +3,8 @@ const app = express();
 /*O config.json pode ser acessado em qualquer parte do projeto */
 const config = require("config");
 const router = require("./routes/supplier");
+const routerV2 = require("./routes/supplier/routes.v2");
+
 //Classes para classificação de erros
 const NotFound = require("./errors/NotFound"); 
 const InvalidField = require("./errors/Invalid");
@@ -44,6 +46,7 @@ app.use((req, res, next) => {
 
 //Aplicando nossas rotas voltadas para o fornecedor
 app.use('/api/suppliers', router);
+app.use('/api/v2/suppliers', routerV2);
 
 app.use((error, req, res, next) => {
   let status = 500;
